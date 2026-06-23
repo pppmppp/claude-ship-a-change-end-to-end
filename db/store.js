@@ -29,7 +29,7 @@ function updateUser(id, { name, email }) {
   if (!user) return undefined;
   user.name = name;
   user.email = email;
-  return user;
+  return { ...user };
 }
 
 module.exports = { getAllUsers, getUserById, createUser, updateUser };
